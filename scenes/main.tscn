@@ -13,30 +13,56 @@ point_count = 3
 [node name="Main" type="Node2D" unique_id=656706738]
 
 [node name="Player" parent="." unique_id=901485245 instance=ExtResource("1_o5qli")]
-position = Vector2(557, 263)
+position = Vector2(536, 532)
 scale = Vector2(2, 2)
 deceleration = 0.044
 dash_curve = SubResource("Curve_w5bpu")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1086920156]
-position = Vector2(-0.5, 0.50001144)
+position = Vector2(11, 17.999998)
 scale = Vector2(4.3999987, 6.120001)
 position_smoothing_enabled = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1445022844]
-position = Vector2(537, 377)
+position = Vector2(540, 646)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=666958203]
 shape = SubResource("WorldBoundaryShape2D_vgy2a")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2071386509]
-position = Vector2(850.00006, 181.99998)
+position = Vector2(1223.0001, 521)
 scale = Vector2(8.799997, 12.240002)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=686669201]
 shape = SubResource("RectangleShape2D_vgy2a")
 
 [node name="ColorRect" type="ColorRect" parent="StaticBody2D2" unique_id=1043856827]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1907050863]
+position = Vector2(1505.0001, 165.99997)
+scale = Vector2(8.799997, 12.240002)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1245223631]
+shape = SubResource("RectangleShape2D_vgy2a")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D3" unique_id=1139213437]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1760882961]
+position = Vector2(782, 630.00006)
+scale = Vector2(8.799997, 12.240002)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1616342080]
+shape = SubResource("RectangleShape2D_vgy2a")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D4" unique_id=1138739234]
 offset_left = -10.0
 offset_top = -10.0
 offset_right = 10.0
