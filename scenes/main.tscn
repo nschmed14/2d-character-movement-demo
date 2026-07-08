@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://xsl5nxc2prro"]
+
+[ext_resource type="PackedScene" uid="uid://jjubp7i3g7l5" path="res://scenes/player.tscn" id="1_o5qli"]
+
+[sub_resource type="Curve" id="Curve_w5bpu"]
+_data = [Vector2(0, 1), 0.0, 0.40858033, 0, 0, Vector2(0.99999, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vgy2a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vgy2a"]
+
+[node name="Main" type="Node2D" unique_id=656706738]
+
+[node name="Player" parent="." unique_id=901485245 instance=ExtResource("1_o5qli")]
+position = Vector2(557, 263)
+scale = Vector2(2, 2)
+deceleration = 0.044
+dash_curve = SubResource("Curve_w5bpu")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1086920156]
+position = Vector2(-0.5, 0.50001144)
+scale = Vector2(4.3999987, 6.120001)
+position_smoothing_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1445022844]
+position = Vector2(537, 377)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=666958203]
+shape = SubResource("WorldBoundaryShape2D_vgy2a")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2071386509]
+position = Vector2(850.00006, 181.99998)
+scale = Vector2(8.799997, 12.240002)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=686669201]
+shape = SubResource("RectangleShape2D_vgy2a")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2" unique_id=1043856827]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
